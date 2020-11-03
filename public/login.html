@@ -9,15 +9,223 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="myCss/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main>
       <div class="container main-login">
         <div class="login-form">
-          <h2>Register</h2>
-          <form action=""></form>
+          <h2>Ebanov Chat</h2>
+
+          <!-- Default form register -->
+          <form class="text-center border border-light p-5" action="#!">
+            <p class="h4 mb-4">Sign up</p>
+
+            <div class="form-row mb-4">
+              <div class="col">
+                <!-- First name -->
+                <input
+                  type="text"
+                  id="defaultRegisterFormFirstName"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="col">
+                <!-- Last name -->
+                <input
+                  type="text"
+                  id="defaultRegisterFormLastName"
+                  class="form-control"
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+
+            <!-- E-mail -->
+            <input
+              type="email"
+              id="defaultRegisterFormEmail"
+              class="form-control mb-4"
+              placeholder="E-mail"
+            />
+
+            <!-- Password -->
+            <input
+              type="password"
+              id="defaultRegisterFormPassword"
+              class="form-control"
+              placeholder="Password"
+              aria-describedby="defaultRegisterFormPasswordHelpBlock"
+            />
+            <small
+              id="defaultRegisterFormPasswordHelpBlock"
+              class="form-text text-muted mb-4"
+            >
+              At least 8 characters and 1 digit
+            </small>
+
+            <!-- Sign up button -->
+            <button class="btn btn-info my-4 btn-block" type="submit">
+              Sign in
+            </button>
+
+            <!-- Social register -->
+
+            <!-- Terms of service -->
+            <p>
+              By clicking <em>Sign up</em> you agree to our
+              <a href="" target="_blank">terms of service</a>
+            </p>
+
+            <a onclick="openLoginModal();">or sign in</a>
+          </form>
+
+          <!-- Всплывающая хуйня -->
+          <div class="modal fade login" id="loginModal">
+            <div class="modal-dialog login animated">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Sign in</h2>
+                </div>
+                <!-- <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                  >
+                    &times;
+                  </button> -->
+                <!-- <h4 class="modal-title">Login with</h4>
+                </div> -->
+                <div class="modal-body">
+                  <div class="box">
+                    <div class="content">
+                      <div class="social">
+                        <a class="circle github" href="#">
+                          <i class="fa fa-github fa-fw"></i>
+                        </a>
+                        <a id="google_login" class="circle google" href="#">
+                          <i class="fa fa-google-plus fa-fw"></i>
+                        </a>
+                        <a id="facebook_login" class="circle facebook" href="#">
+                          <i class="fa fa-facebook fa-fw"></i>
+                        </a>
+                      </div>
+                      <div class="division">
+                        <div class="line l"></div>
+                        <!-- <span>or</span> -->
+                        <div class="line r"></div>
+                      </div>
+                      <div class="error"></div>
+                      <div class="form loginBox">
+                        <form method="" action="" accept-charset="UTF-8">
+                          <input
+                            id="email"
+                            class="form-control"
+                            type="text"
+                            placeholder="Email"
+                            name="email"
+                          />
+                          <input
+                            id="password"
+                            class="form-control"
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                          />
+                          <br />
+                          <br />
+                          <input
+                            class="btn btn-default btn-login"
+                            type="button"
+                            value="Login"
+                            onclick="loginAjax()"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box">
+                    <div class="content registerBox" style="display: none">
+                      <div class="form">
+                        <form
+                          method=""
+                          html="{:multipart=>true}"
+                          data-remote="true"
+                          action=""
+                          accept-charset="UTF-8"
+                        >
+                          <input
+                            id="email"
+                            class="form-control"
+                            type="text"
+                            placeholder="Email"
+                            name="email"
+                          />
+                          <input
+                            id="password"
+                            class="form-control"
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                          />
+                          <input
+                            id="password_confirmation"
+                            class="form-control"
+                            type="password"
+                            placeholder="Repeat Password"
+                            name="password_confirmation"
+                          />
+                          <input
+                            class="btn btn-default btn-register"
+                            type="button"
+                            value="Create account"
+                            name="commit"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Всплывающая хуйня -->
+
+          <!-- Default form register -->
         </div>
       </div>
     </main>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="myCss/login.js"></script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function () {
+        openLoginModal();
+      });
+    </script> -->
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
   </body>
 </html>
