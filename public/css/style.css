@@ -1,3 +1,12 @@
-.container mt-5 {
-  margin-top: 0 !important;
+.left_bar {
+  height: 100%;
+  width: 30%;
+  margin-left: 0;
+}
+
+.right_bar {
+  height: 100%;
+  width: 70%;
+  border: 3px black solid;
+  margin-right: 0;
 }
