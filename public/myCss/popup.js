@@ -2,9 +2,11 @@ const popupLinks = document.querySelectorAll(".popup-link");
 const body = document.querySelector("body");
 const lockPadding = document.querySelectorAll(".lock-padding");
 
+const closeBtns = document.querySelectorAll(".close-popup");
+
 let unlock = true;
 
-const timeout = 800;
+const timeout = 400;
 
 if (popupLinks.length > 0) {
   for (let index = 0; index < popupLinks.length; index++) {
@@ -15,6 +17,22 @@ if (popupLinks.length > 0) {
       console.log(popupName);
       const curentPopup = document.getElementById(popupName);
       popupOpen(curentPopup);
+      e.preventDefault();
+    });
+  }
+}
+
+if (closeBtns.length > 0) {
+  for (let index = 0; index < closeBtns.length; index++) {
+    const closeBtn = closeBtns[index];
+    closeBtn.addEventListener("click", function (e) {
+      console.log("Ebalo zarkoy cuka");
+      const closestPopup = e.target.closest(".popup");
+      //   const popupName = popupLink.getAttribute("href").replace("#", "");
+      //   console.log(popupName);
+      //   const curentPopup = document.getElementById(popupName);
+      console.log(closestPopup.id);
+      popupOpen(closestPopup.id);
       e.preventDefault();
     });
   }
@@ -49,10 +67,11 @@ function popupOpen(currentPopup) {
 }
 
 function popupClose(popupActive, doUnlock = true) {
+  console.log("Zakroy rot ");
   if (unlock) {
     popupActive.classList.remove("open");
     if (doUnlock) {
-      bodyunLock();
+      //   bodyUnLock();
     }
   }
 }

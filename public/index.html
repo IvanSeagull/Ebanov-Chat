@@ -29,6 +29,7 @@
     <link href="css/addons-pro/chat.css" rel="stylesheet" />
     <!-- Chat CSS - minified-->
     <link href="css/addons-pro/chat.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="myCss/popup.css" />
   </head>
 
   <body>
@@ -58,15 +59,20 @@
                 <p class="mb-4 pb-2 white-text">
                   Private chat for allowed users. (No Monkeys)
                 </p>
-                <button
-                  type="button"
-                  class="btn btn-outline-white btn-md ml-md-0"
-                >
-                  Register
-                </button>
-                <button type="button" class="btn btn-white btn-md">
-                  Log in
-                </button>
+                <a href="#popup" class="popup-link" id="open__popup">
+                  <button
+                    type="button"
+                    class="btn btn-outline-white btn-md ml-md-0"
+                  >
+                    Register
+                  </button>
+                </a>
+
+                <a href="#popup2" class="popup-link" id="open__popup">
+                  <button type="button" class="btn btn-white btn-md">
+                    Log in
+                  </button>
+                </a>
               </div>
               <!--Grid column-->
 
@@ -91,6 +97,154 @@
     <!-- Main navigation -->
     <!-- End your project here-->
 
+    <!-- Всплывающая хуйня #1 здесь register -->
+
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">X</a>
+          <!-- Default form register -->
+          <form
+            class="text-center p-5"
+            style="min-width: 400px; width: 400px"
+            action="#!"
+          >
+            <p class="h4 mb-4">Sign up</p>
+
+            <div class="form-row mb-4">
+              <div class="col">
+                <!-- First name -->
+                <input
+                  type="text"
+                  id="defaultRegisterFormFirstName"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="col">
+                <!-- Last name -->
+                <input
+                  type="text"
+                  id="defaultRegisterFormLastName"
+                  class="form-control"
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+
+            <!-- E-mail -->
+            <input
+              type="email"
+              id="defaultRegisterFormEmail"
+              class="form-control mb-4"
+              placeholder="E-mail"
+            />
+
+            <!-- Password -->
+            <input
+              type="password"
+              id="defaultRegisterFormPassword"
+              class="form-control"
+              placeholder="Password"
+              aria-describedby="defaultRegisterFormPasswordHelpBlock"
+            />
+            <small
+              id="defaultRegisterFormPasswordHelpBlock"
+              class="form-text text-muted mb-4"
+            >
+              At least 8 characters and 1 digit
+            </small>
+
+            <!-- Newsletter
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="defaultRegisterFormNewsletter"
+              />
+              <label
+                class="custom-control-label"
+                for="defaultRegisterFormNewsletter"
+                >Im not a monkey</label
+              >
+            </div> -->
+
+            <!-- Sign up button -->
+            <button class="btn btn-info my-4 btn-block" type="submit">
+              Register
+            </button>
+
+            <!-- Terms of service -->
+            <p>
+              By clicking <em>Register</em> you agree that
+              <a href="" target="_blank">you are not a monkey</a>
+            </p>
+          </form>
+
+          <!-- Default form register -->
+
+          <!-- <div class="popup__title">Modal window #1</div>
+          <div class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod
+            iure quaerat sunt nisi ex nobis nostrum enim doloribus, impedit
+            necessitatibus, blanditiis ducimus. Nisi rem quam vero aut, quo
+            impedit? ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            quod iure quaerat sunt nisi ex nobis nostrum enim doloribus, impedit
+            necessitatibus, blanditiis ducimus. Nisi rem quam vero aut, quo
+            impedit?
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Всплывающая хуйня #2 здесь login -->
+
+    <div id="popup2" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">X</a>
+          <!-- Default form subscription -->
+          <form
+            class="text-center p-5"
+            style="min-width: 400px; width: 400px"
+            action="#!"
+          >
+            <p class="h4 mb-4">Log in</p>
+
+            <!-- Name -->
+
+            <!-- Email -->
+            <input
+              type="email"
+              id="defaultSubscriptionFormEmail"
+              class="form-control mb-4"
+              placeholder="E-mail"
+            />
+
+            <input
+              type="password"
+              id="defaultSubscriptionFormPassword"
+              class="form-control mb-4"
+              placeholder="Password"
+            />
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block" type="submit">Log in</button>
+          </form>
+          <!-- Default form subscription -->
+          <!-- <div class="popup__title">Modal window #2</div>
+          <div class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod
+            iure quaerat sunt nisi ex nobis nostrum enim doloribus, impedit
+            necessitatibus, blanditiis ducimus. Nisi rem quam vero aut, quo
+            impedit? ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            quod iure quaerat sunt nisi ex nobis nostrum enim doloribus, impedit
+            necessitatibus, blanditiis ducimus. Nisi rem quam vero aut, quo
+            impedit?
+          </div> -->
+        </div>
+      </div>
+    </div>
+
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -101,6 +255,8 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Your custom scripts (optional) -->
     <script type="text/javascript"></script>
+
+    <script src="myCss/popup.js"></script>
     <script>
       new WOW().init();
     </script>
